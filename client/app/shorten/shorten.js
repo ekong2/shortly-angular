@@ -7,6 +7,10 @@ angular.module('shortly.shorten', [])
     Auth.signout();
   };
 
+  $scope.redirectToLinks = function(){
+    window.location = '#/links';
+  };
+
   //TODO: make this actually shorten the link
   $scope.addLink = function(url){
     console.log('attempting to shorten a link from shorten.js');

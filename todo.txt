@@ -6,7 +6,7 @@
 [√] use angular validation for links and signup/login
 [√] save users to database and create sessions
 [√] show errors for invalid submissions
-[] set visit count and display in order of most visits
+[√] set visit count and display in order of most visits
 [] live search results when typing query
 [] save user_id on links
 [] only retrieve links for specific user

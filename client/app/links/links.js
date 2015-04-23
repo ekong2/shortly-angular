@@ -7,6 +7,12 @@ angular.module('shortly.links', [])
     Auth.signout();
   };
 
+  $scope.authenticate = Auth.isAuth();
+
+  $scope.redirectToShorten = function(){
+    window.location = '#/shorten';
+  };
+
   $scope.getLinks = function(){
     //TODO: figure out user param on getlinks
     Links.getlinks()
