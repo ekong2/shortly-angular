@@ -7,6 +7,7 @@ angular.module('shortly.services', [])
       url: '/api/links'
     })
     .then(function (resp) {
+      //TODO: double check this resp
       return resp.data;
     });
   };
@@ -19,6 +20,7 @@ angular.module('shortly.services', [])
     })
     .then(function (resp) {
       console.log(resp);
+      //TODO: double check this resp
       return resp.data;
     });
   };
