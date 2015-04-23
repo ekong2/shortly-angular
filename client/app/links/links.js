@@ -1,7 +1,11 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, Links) {
+.controller('LinksController', function ($scope, Links, Auth) {
   $scope.data = {};
+
+  $scope.signout = function(){
+    Auth.signout();
+  };
 
   $scope.getLinks = function(){
     //TODO: figure out user param on getlinks

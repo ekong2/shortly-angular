@@ -1,7 +1,11 @@
 angular.module('shortly.shorten', [])
 
-.controller('ShortenController', function ($scope, $location, Links) {
+.controller('ShortenController', function ($scope, $location, Links, Auth) {
   $scope.link = {};
+
+  $scope.signout = function(){
+    Auth.signout();
+  };
 
   //TODO: make this actually shorten the link
   $scope.addLink = function(url){
