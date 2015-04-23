@@ -7,6 +7,8 @@ angular.module('shortly.services', [])
       url: '/api/links'
     })
     .then(function (resp) {
+      console.log('getting all the links');
+      console.log(resp);
       //TODO: double check this resp
       return resp.data;
     });
@@ -16,9 +18,10 @@ angular.module('shortly.services', [])
     return $http({
       method: 'POST',
       url: '/api/links',
-      data: link
+      data: {url: link}
     })
     .then(function (resp) {
+      console.log('posting a new link');
       console.log(resp);
       //TODO: double check this resp
       return resp.data;
