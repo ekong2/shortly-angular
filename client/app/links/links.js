@@ -5,11 +5,13 @@ angular.module('shortly.links', [])
 
   $scope.getLinks = function(){
     //TODO: figure out user param on getlinks
-    Links.getlinks(user)
+    Links.getlinks()
       .then(function(links){
-        $scope.data = links;
+        $scope.data['links'] = links;
       });
   };
+
+  $scope.getLinks();
 
 });
 
